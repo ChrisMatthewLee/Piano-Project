@@ -1,11 +1,10 @@
 #PIANO PROJECT__________________________________________________________________
-import os
+import winsound, sys
 from Tkinter import *
 root = Tk()
 
 # Create the canvas widget
 drawpad = Canvas(root, width=1200,height=600, background='white')
-drawpad.grid(row=0, column=1)
 
 #bases
 pianoBaseBlack = drawpad.create_rectangle(50,50,1150,550, fill= "black" )
@@ -53,9 +52,32 @@ class myApp(object):
     
     def key(self,event):
          if event.char == "a":
-            os.system("start H:\CompSci\Piano\Piano Tones\File")
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\C.wav',winsound.SND_FILENAME)
+         if event.char == "s":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\D.wav',winsound.SND_FILENAME)
+         if event.char == "d":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\E.wav',winsound.SND_FILENAME)
+         if event.char == "f":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\F.wav',winsound.SND_FILENAME)
+         if event.char == "g":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\G.wav',winsound.SND_FILENAME)
+         if event.char == "h":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\A2.wav',winsound.SND_FILENAME)
+         if event.char == "j":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\B2.wav',winsound.SND_FILENAME)
+         if event.char == "k":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\C2.wav',winsound.SND_FILENAME)
+         if event.char == "q":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\C#.wav',winsound.SND_FILENAME)
+         if event.char == "w":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\D#.wav',winsound.SND_FILENAME)
+         if event.char == "r":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\F#.wav',winsound.SND_FILENAME)
+         if event.char == "t":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\G#.wav',winsound.SND_FILENAME)
+         if event.char == "y":
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\A#.wav',winsound.SND_FILENAME)
+              
              
-
+app = myApp(root)
 root.mainloop()
-
-
