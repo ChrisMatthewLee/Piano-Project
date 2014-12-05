@@ -13,8 +13,8 @@ waterMark = drawpad.create_rectangle(100,100,1100,150, fill= 'white')
 
 #keys (WHITE KEYS: 50 wide)
 
-#31.25
-#93.75
+#true
+
 
 # C
 c = drawpad.create_rectangle(100,200,225,500, fill= 'white')
@@ -51,32 +51,73 @@ class myApp(object):
         root.bind_all('<Key>', self.key)
     
     def key(self,event):
+         global c
+         global drawpad
          if event.char == "a":
+             drawpad.itemconfig(c, fill= "black")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\C.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(c, fill= "white")
          if event.char == "s":
+             drawpad.itemconfig(d, fill= "black")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\D.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(d, fill= "white")
          if event.char == "d":
+             drawpad.itemconfig(e, fill= "black")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\E.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(e, fill= "white")
          if event.char == "f":
+             drawpad.itemconfig(f, fill= "black")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\F.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(f, fill= "white")
          if event.char == "g":
+             drawpad.itemconfig(g, fill= "black")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\G.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(g, fill= "white")
          if event.char == "h":
+             drawpad.itemconfig(a, fill= "black")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\A2.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(a, fill= "white")
          if event.char == "j":
+             drawpad.itemconfig(b, fill= "black")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\B2.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(b, fill= "white")
          if event.char == "k":
+             drawpad.itemconfig(cOctave, fill= "black")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\C2.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(cOctave, fill= "white")
          if event.char == "q":
+             drawpad.itemconfig(cSharp, fill= "white")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\C#.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(cSharp, fill= "black")
          if event.char == "w":
+             drawpad.itemconfig(dSharp, fill= "white")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\D#.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(dSharp, fill= "black")
          if event.char == "r":
+             drawpad.itemconfig(fSharp, fill= "white")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\F#.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(fSharp, fill= "black")
          if event.char == "t":
+             drawpad.itemconfig(gSharp, fill= "white")
+             root.update_idletasks()
              winsound.PlaySound('H:\CompSci\Piano\Piano Tones\G#.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(gSharp, fill= "black")
          if event.char == "y":
-             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\A#.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(aSharp, fill= "white")
+             root.update_idletasks()
+             winsound.PlaySound('H:\CompSci\Piano\Piano Tones\A#2.wav',winsound.SND_FILENAME)
+             drawpad.itemconfig(aSharp, fill= "black")
               
              
 app = myApp(root)
