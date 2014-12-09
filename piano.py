@@ -13,9 +13,6 @@ waterMark = drawpad.create_rectangle(100,100,1100,150, fill= 'white')
 
 #keys (WHITE KEYS: 50 wide)
 
-#true
-
-
 # C
 c = drawpad.create_rectangle(100,200,225,500, fill= 'white')
 # D
@@ -45,6 +42,7 @@ aSharp = drawpad.create_rectangle(818.75,200,881.25,350, fill= 'black')
 
 waterMarkText = drawpad.create_text(600,125, fill= 'black', text= 'Python Piano - By Chris Lee, Mason Confer, and Joe Torres. (c) 2014')
 
+#control text
 class myApp(object):
     def __init__(self, parent):
         drawpad.pack()
