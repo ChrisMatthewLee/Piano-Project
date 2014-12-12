@@ -5,7 +5,7 @@ article, aside, figure, footer, header, nav, section {
 
 /* the styles for the elements */
 html {
-	background-color: grey;
+	background-color: #CBCBCB;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
 a:focus, a:hover {
 	font-size: 100%;
-	color: #FF00FF;
+	color: #33CCFF;
 	text-decoration:underline;
 	font-weight: bold;
 }
